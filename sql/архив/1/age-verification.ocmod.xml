@@ -1,0 +1,22 @@
+<modification>
+  <name><![CDATA[<font color="#15C403"><b>Age Verify On startpage</font>]]></name>
+  <code>age-verification</code>
+  <version>2.6</version>
+  <author><![CDATA[<font color="#E50223"><b>danuel</font>]]></author>
+  <link></link>
+
+  <file path="catalog/view/theme/*/template/common/footer.tpl">
+	  <operation>
+      <search>
+        <![CDATA[</body>]]>
+      </search>
+      <add position="before">
+        <![CDATA[<!-- Start Age Verification -->
+		<link href="verification/agecheck.css" rel="stylesheet" />
+		<script src="verification/jquery.agecheck.js"></script>
+		<script src="verification/alt.js"></script>
+		<!-- End Age Verification -->]]>
+      </add>
+    </operation>
+  </file>
+</modification>
