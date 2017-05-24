@@ -1,0 +1,36 @@
+при установке OpenCart 1.5.6
+На втором шаге вылетает ошибка MySQL extension needs to be loaded for OpenCart to work!
+
+решилась простым закомментированием 
+/opencart-1.5.6.4/upload/install/controllerstep2.php 
+// if (!extension_loaded('mysql')) {
+// $this->error['warning'] = 'Warning: MySQL extension needs to be loaded for OpenCart to work!';
+// }
+
+установка opencart:
+при ошибке о курл и зип
+-apt-get install php-curl
+-apt-get install php-zip
+
+проблема с загрузкой extension(для обхода ftp):
+-установить extension "QuickFix"
+
+русификация:
+1. Скопируйте содержимое архива (директории admin и catalog) в корень каталога вашего сайта.
+* (корень - это где находятся файлы index.php, robots.txt итд )
+
+2. Зайдите в административную часть ( www.ваш-сайт.ru/admin ) и добавьте русский язык: System > Localisation > Languages >> Add.
+Далее, заполните форму:
+Language Name: Русский
+Code: ru-ru
+Locale: ru_RU.UTF-8,ru_RU,ru-gb,russian
+Status: Enabled
+
+save
+
+русификация админки:
+1. Перейдите в меню "System - Settings" и нажмите на "Edit".
+
+2. Выберите вкладку "Local". В выпадающем списке "Language" и "Administration Language" выберите язык "Russian".
+
+для добавления группового вкл\выкл товаров установить EnableDisable Products 1.04en
